@@ -66,10 +66,6 @@ void absolute_value (float *p, int n)
 /* The benchmarking program */
 int main (int argc, char **argv)
 {
-  omp_set_num_threads(64);
-  openblas_set_num_threads(64);
-  printf ("threads: %d, Description:\t%s\n\n", openblas_get_num_threads(), gemm_desc);
-
   /* Test sizes should highlight performance dips at multiples of certain powers-of-two */
 
   int test_sizes[] =
